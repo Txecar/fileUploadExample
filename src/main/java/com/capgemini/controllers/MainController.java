@@ -48,10 +48,12 @@ public class MainController {
 		if(! imagen.isEmpty()) {
 			
 			// Obtenemos la ruta relativa
-			Path imagesFolder = Paths.get("src//main//resources//static/images");
+			// Path imagesFolder = Paths.get("src//main//resources//static/images");
 			
 			// Ruta absoluta
-			String rutaAbsoluta = imagesFolder.toFile().getAbsolutePath();	
+			// String rutaAbsoluta = imagesFolder.toFile().getAbsolutePath();	
+			
+			String rutaAbsoluta = "//home//curso//Persona//recursos";
 			
 			try {
 				byte[] bytesImages = imagen.getBytes();

@@ -7,11 +7,11 @@
 <body>
 	<h1>Detalles de la Persona</h1>
 	
-	<img th:alt="${persona.foto}" th:src="@{'/images/'} + ${persona.foto}">
+	<img th:alt="${persona.foto}" th:src="@{'/recursos/'} + ${persona.foto}">
 	
 	<ul>
 		<li th:text="'Nombre: ' + ${persona.nombre}"></li>
-		<li th:text="'Apellidos' + ${persona.apellidos}"></li>
+		<li th:text="'Apellidos: ' + ${persona.apellidos}"></li>
 	</ul>
 
 </body>
