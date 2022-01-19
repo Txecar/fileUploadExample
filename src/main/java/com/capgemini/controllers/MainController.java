@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,8 @@ import com.capgemini.service.IPersonaService;
 @Controller
 @RequestMapping("/")
 public class MainController {
+	
+	private static final Log LOG = LogFactory.getLog(MainController.class);
 	
 	@Autowired
 	private IPersonaService personaService;
@@ -60,6 +64,8 @@ public class MainController {
 				
 				// Ruta completa, que incluye el nombre original de la imagen
 				Path rutaCompleta = Paths.get(rutaAbsoluta + "//" + imagen.getOriginalFilename());
+				
+				LOG.info("ruta completa a la imagen: " + rutaCompleta);
 				
 				Files.write(rutaCompleta, bytesImages);
 				
